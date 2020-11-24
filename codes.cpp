@@ -21,9 +21,10 @@
 using namespace vex;
 
 #define PI 2*acos(0.0)
+#define ws 3.25 //wheelsize
 
 void move(float dis){
-  float deg=360*dis/25.933825,V;
+  float deg=360*dis/(ws*2.54*PI),V;
   RMotor.setStopping(brake);
   LMotor.setStopping(brake);
   RMotor.setVelocity(0,percent);
