@@ -6,6 +6,18 @@
 /*    Description:  V5 project                                                */
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
+MoveTo 1536,723
+LeftClick 1
+While True
+	GetColor=GetPixelColor(1536,723)
+	While GetColor<>"7CF6D1"
+    	GetColor=GetPixelColor(1536,723)
+	Wend
+	Delay (600 * Rnd) + 100
+	LeftClick 1
+	Delay 5000
+	LeftClick 1
+Wend
 
 // ---- START VEXCODE CONFIGURED DEVICES ----
 // Robot Configuration:
