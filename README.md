@@ -2,8 +2,8 @@
 
 create by aura
 
-動作指令
----
+## 動作指令
+
 ### 馬達旋轉  
 <pre><code>MotorName.spin(方向);</code></pre>
 方向有兩種：
@@ -43,7 +43,7 @@ create by aura
 * drgrees 角度
 * turns 圈數，一圈 = 360度
 
-### 設定馬達角度  
+### 選轉馬達角度  
 <pre><code>MotorName.spinFor(方向, 數值, 單位); </code></pre>
 方向有兩種：
 * forward 正轉
@@ -52,7 +52,70 @@ create by aura
 單位有兩種：
 * drgrees 角度
 * turns 圈數，一圈 = 360度  
+
+### 選轉馬達到特定角度  
+<pre><code>MotorName.spinToPosition(數值, 單位);</code></pre>
+單位有兩種：
+* drgrees 角度
+* turns 圈數，一圈 = 360度  
 <br><br>
+
+
+## 畫面指令
+
+### 清除一行
+<pre><code>Brain.Screen.clearLine();         //主機
+Controller.Screen.clearLine();    //遙控器</code></pre>
+
+### 清除畫面
+<pre><code>Brain.Screen.clearScreen();       //主機
+Controller.Screen.clearScreen();  //遙控器</code></pre>
+
+### 畫面畫圓
+<pre><code>Brain.Screen.drawCircle(x, y, R);   //主機</code></pre>
+(x, y)為座標, R為圓半徑
+
+### 畫面畫線
+<pre><code>Brain.Screen.drawLine(x1, y1, x2, y2); //主機</code></pre>
+會畫條線從(x1, y1)到(x2, y2)
+
+### 畫面畫點
+<pre><code>Brain.Screen.drawPixel(x, y); //主機</code></pre>
+在(x, y)上畫一點
+
+### 畫面畫長方形
+<pre><code>Brain.Screen.drawRectangle(x1, y1, x2, y2);  //主機</code></pre>
+以(x1, y1)和(x2, y2)對角點畫長方形
+
+### 畫面文字換行
+<pre><code>Brain.Screen.newLine();  //主機</code></pre>
+
+### 畫面顯示文字
+<pre><code>Brain.Screen.print("字串"); //主機</code></pre>
+字串需用雙引號把文字框起來 "內容"
+
+### 畫面設定文字顯示起始位置
+<pre><code>Brain.Screen.setCursor(x, y); //主機</code></pre>
+會從左上角開始，第x行第y列開始顯示文字
+
+### 畫面填滿顏色
+<pre><code>Brain.Screen.setFillColor(顏色); //主機</code></pre>
+|顏色|程式碼|
+|--|--|
+|黑色|black|
+|藍色|blue|
+|淺藍色|cyan|
+|綠色|green|
+|橘色|orange|
+|紫色|purple|
+|紅色|red|
+|透明色*|transparent|
+|白色|white|
+|黃色|yellow|
+
+
+
+<br><br><br><br><br><br>
 
 分隔線，先不用理會後面的東西
 ---
